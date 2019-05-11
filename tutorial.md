@@ -19,8 +19,8 @@ Let's say this is our matrix:
 ```
 We can visualize this array like this:
 
- | column 1 | column 2 | column 3
---- |---|---| ---:
+. | column 1 | column 2 | column 3
+--- | --- | --- | ---:
 row 1 | 1 | 2 | 3
 row 2 | 4 | 5 | 6
 row 3 | 7 | 8 | 9
