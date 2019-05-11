@@ -57,3 +57,43 @@ This is what we wanted to do, and visualized is:
 row 1 | 1 | 4 | 7
 row 2 | 2 | 5 | 8
 row 3 | 3 | 6 | 9
+
+
+
+### Using numpy
+
+NumPy is a python module used for scientific computing in python, as stated in its documentation. It's good for multi-dimensional array objects, integrating C/C++ code, and algebra/number capabilities. The module NumPy contains a class with a method that will transpose any given array quickly and easily. Numpy, however, is not installed by default with python and must be downloaded manually. To do this on windows:
+
+1. Open command prompt (cmd.exe)
+2. Run the following to install numpy: python -m pip install numpy
+
+It will install, and then numpy can be imported to your python module with:
+```python
+import numpy
+```
+
+With the example above, imagine a matrix:
+```python
+>>> mainList = [[1,2,3],[4,5,6],[7,8,9]]
+```
+
+to use numpy.ndarray.transpose, we must first convert our list to a numpy array
+```python
+>>> ourArray = numpy.array(mainList)
+>>> ourArray
+array([[1, 2, 3],
+       [4, 5, 6],
+       [7, 8, 9]])
+```
+
+then, we can use ndarray.transpose by passing in ourArray as the argument:
+```python
+>>> numpy.ndarray.transpose(ourArray)
+array([[1, 4, 7],
+       [2, 5, 8],
+       [3, 6, 9]])
+```
+
+
+
+### List Comprehensions
