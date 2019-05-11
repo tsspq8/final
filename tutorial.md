@@ -5,11 +5,12 @@
 
 There are multiple ways to do this, but the ones I think are most convenient/informative and the methods I will cover include:
 
-* The zip() function
-* A class in the numpy module
-* List comprehensions
+* [The zip() function](zip)
+* [A class in the numpy module](numpy)
+* [List comprehensions](list)
 
 ### Using the zip() function
+<a id="zip"></a>
 
 In python, the zip() function takes any number of arguments. All arguments must be iterable, like lists for example. With any given lists, the zip function will return zip object, which is a collection of tuples of each item at a specific index in each list. So, for example, zipping lists containing 1,2,3 and 4,5,6 returns tuples 1,4 and 2,5 and 3,6. With a list of lists, zip can be used to transpose each row and column. 
 
@@ -61,6 +62,7 @@ row 3 | 3 | 6 | 9
 
 
 ### Using numpy
+<a id="numpy"></a>
 
 NumPy is a python module used for scientific computing in python, as stated in its documentation. It's good for multi-dimensional array objects, integrating C/C++ code, and algebra/number capabilities. The module NumPy contains a class with a method that will transpose any given array quickly and easily. Numpy, however, is not installed by default with python and must be downloaded manually. To do this on windows:
 
@@ -97,3 +99,17 @@ array([[1, 4, 7],
 
 
 ### List Comprehensions
+<a id="list"></a>
+
+List comprehensions in python are used to conveniently perform some function for each item in a list. 
+
+Consider the previous matrix:
+```python
+mainList = [[1,2,3],[4,5,6],[7,8,9]]
+```
+
+To create a new list with the items transposed, we can use this list comprehension:
+```python
+transposedList = [[mainList[j][i] for j in range(len(mainList))] for i in range(len(mainList[0]))]
+```
+This list comprehension will go through each j in the mainList, which is rows, and each i in each j, which is columns, and create a list mainList row j column i. 
