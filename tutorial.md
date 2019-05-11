@@ -5,9 +5,9 @@
 
 There are multiple ways to do this, but the ones I think are most convenient/informative and the methods I will cover include:
 
-* [The zip() function](zip)
-* [A class in the numpy module](numpy)
-* [List comprehensions](list)
+* [The zip() function](#zip)
+* [A class in the numpy module](#numpy)
+* [List comprehensions](#list)
 
 ### Using the zip() function
 <a id="zip"></a>
